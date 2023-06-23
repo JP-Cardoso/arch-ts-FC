@@ -1,4 +1,4 @@
-import { RouteInMemoryRespository } from "../infra/route-in-memory.repository";
+import { RouteInMemoryRespository } from "../infra/db/route-in-memory.repository";
 import { CreateRouteUseCase } from "./create-route.use-cases"
 
 describe('CreateRouteUseCase', () => {
@@ -15,14 +15,15 @@ describe('CreateRouteUseCase', () => {
             }
         );
 
+        expect(repository.items).toHaveLength(1);
         expect(output).toStrictEqual(
             {
+                id: repository.items[0].id,
                 title: 'my title',
                 startPosition: { lat: 1, lng: 2 },
                 endPosition: { lat: 2, lng: 3 },
                 points: []
             }
         );
-        expect(repository.items).toHaveLength(1);
     })
 })

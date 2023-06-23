@@ -9,11 +9,11 @@
 //         ]
 //     }
 // );
- 
+
 /**
  * Descrevendo minhas necessidades
  */
-
+import crypto from 'crypto'
 export type LatLng = {
     lat: number, lng: number
 }
@@ -28,11 +28,13 @@ export type RoutesProps = {
 export class Route {
 
     public props: Required<RoutesProps>
-
+    public readonly id: string;
     constructor(
-        props: RoutesProps
+        props: RoutesProps,
+        id?: string
     ) {
         // this.props = props;
+        this.id = id || crypto.randomUUID()
         this.props = {
             ...props,
             points: props.points || []
@@ -55,7 +57,7 @@ export class Route {
     };
 
     private set startPosition(value: LatLng) {
-        this.startPosition = value
+        this.props.startPosition = value
     }
 
     get endPosition() {
@@ -63,7 +65,7 @@ export class Route {
     };
 
     private set endPosition(value: LatLng) {
-        this.endPosition = value
+        this.props.endPosition = value
     }
 
     get points() {
@@ -71,7 +73,7 @@ export class Route {
     }
 
     private set points(value: LatLng[]) {
-        this.points = value;
+        this.props.points = value;
     }
 
     updateTitle(value: string) {
@@ -88,7 +90,10 @@ export class Route {
     }
 
     toJson() {
-        return this.props
+        return {
+            id: this.id,
+            ...this.props
+        }
     }
 
 
