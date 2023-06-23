@@ -1,0 +1,2 @@
+Os casos de usos, como são necessidades da camada de aplicação,
+elas vem para cá

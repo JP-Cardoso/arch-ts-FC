@@ -1,0 +1,3 @@
+Onde estão as regras de negócio, vão para a domain
+pois pertence a camada de dominio. Então a entiade, e contrato dela
+também vem para cá
