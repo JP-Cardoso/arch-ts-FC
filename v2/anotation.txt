@@ -1,0 +1,16 @@
+Arquitetura limpa:
+
+Entre os detalhes do sistema (baixo e alto nível), diz muito a respeito da construção do software.
+Em questão dos detalhes de alto nível, nos referimos a arquitetura, que aquele sistema foi constuído (esqueleto de como o sistema está organizado). 
+Porém o desing do sistema vem por baixo, da arquitetura, onde nos implica quais padrões de projetos foram usados, qual freamwork está sendo usado.
+
+#### Por que?
+Construímos essa arquitetura, para que o software tenha uma vida útil prolongada, e facilitar a manutentabildade ao longo do tempo.
+E ele tem objetivo em minimizar toda a perda de recursos que são utilizadas no sistema. 
+
+-=-=-=-=-=-=-=-==-=-=-=-=-=-=-=-=-=-=-=-=-=-=-==-=-
+* Pense em como formular as regras de negócio da aplicação, pois elas devem ser independentes de qualquer coisa externa.
+ * Pense 
+* Pense na questão de deixar explicito as suas intenções no código, seja claro para cada função, método que você for criar.
+* Faça a inversão da depêndeica, faça com que a lib trabalhe para você, e não que você trabalhe para a lib. Desse modo, você 
+    da liberdade ao projeto
