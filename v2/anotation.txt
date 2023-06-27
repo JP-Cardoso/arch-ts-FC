@@ -19,3 +19,7 @@ E ele tem objetivo em minimizar toda a perda de recursos que são utilizadas no 
 * Faça a inversão da depêndeica, faça com que a lib trabalhe para você, e não que você trabalhe para a lib. Desse modo, você 
     da liberdade ao projeto
 * Pense no que faz sentido para sua RN
+
+##############################################################################
+Os casos de usos, são regras de negócios que coordenam as regras de negócio mais puras das nossas entidades;
+* Determina como que os usuarios vão utilizar meu sistema;

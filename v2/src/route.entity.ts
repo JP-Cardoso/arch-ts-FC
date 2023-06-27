@@ -45,7 +45,7 @@ export class Route {
     private set endPosition(value: LatLng) {
         this.props.endPosition = value;
     };
-      
+
     get points() {
         return this.props.points
     }
@@ -66,6 +66,10 @@ export class Route {
     updatedPoints(value: LatLng[]) {
         this.points = value;
     };
+
+    toJson() {
+        return this.props;
+    }
 
 };
 
