@@ -3,8 +3,8 @@
  * Esse cara está independente de libs de armazenamentos
  */
 
-import { LatLng, Route } from "./route.entity";
-import { RouteRepositoryInterface } from "./route.repository";
+import { LatLng, Route } from "../domain/route.entity";
+import { RouteRepositoryInterface } from "../domain/route.repository";
 
 type CreateRouteInput = {
     title: string,
