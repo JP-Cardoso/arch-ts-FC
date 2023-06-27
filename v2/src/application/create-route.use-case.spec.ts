@@ -13,15 +13,16 @@ describe('Create Route Use Case', () => {
             }
         );
 
+        expect(repo.items).toHaveLength(1)
         expect(output).toStrictEqual(
             {
+                id:repo.items[0].id,
                 title: 'My Title',
                 startPosition: { lat: 1, lng: 3 },
                 endPosition: { lat: 2, lng: 4 },
                 points: [],
             }
         );
-        expect(repo.items).toHaveLength(1)
 
     })
 })

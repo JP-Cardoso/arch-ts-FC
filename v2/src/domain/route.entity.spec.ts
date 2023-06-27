@@ -23,6 +23,7 @@ describe('Route Tests', () => {
         };
 
         route = new Route(routeProps);
+        expect(route.id).toBeDefined()
         expect(route.props).toStrictEqual({
             ...routeProps,
             points: [

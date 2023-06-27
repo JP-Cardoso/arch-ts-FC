@@ -1,3 +1,5 @@
+import crypto from "crypto";
+
 /**
  * A Regra de Negócio fica em suas entidades
  */
@@ -11,10 +13,13 @@ export type RoutesProps = {
 };
 
 export class Route {
+    public readonly id: string
     public props: Required<RoutesProps>
     constructor(
-        props: RoutesProps
+        props: RoutesProps,
+        id?: string
     ) {
+        this.id = id || crypto.randomUUID()
         // this.props = props
         this.props = {
             ...props,
@@ -68,7 +73,7 @@ export class Route {
     };
 
     toJson() {
-        return this.props;
+        return { id: this.id, ...this.props };
     }
 
 };
