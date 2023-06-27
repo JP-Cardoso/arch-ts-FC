@@ -1,3 +1,7 @@
+Depêndeica:
+@swc -> Uma lib da versel, que compila Ts par Js, baseada em rust
+
+######################################################
 Arquitetura limpa:
 
 Entre os detalhes do sistema (baixo e alto nível), diz muito a respeito da construção do software.
@@ -14,3 +18,4 @@ E ele tem objetivo em minimizar toda a perda de recursos que são utilizadas no 
 * Pense na questão de deixar explicito as suas intenções no código, seja claro para cada função, método que você for criar.
 * Faça a inversão da depêndeica, faça com que a lib trabalhe para você, e não que você trabalhe para a lib. Desse modo, você 
     da liberdade ao projeto
+* Pense no que faz sentido para sua RN
