@@ -23,3 +23,11 @@ E ele tem objetivo em minimizar toda a perda de recursos que são utilizadas no 
 ##############################################################################
 Os casos de usos, são regras de negócios que coordenam as regras de negócio mais puras das nossas entidades;
 * Determina como que os usuarios vão utilizar meu sistema;
+
+#############################################################################
+Cada camada só deve conhecer apenas a camada seguinte, a camada de mais baixo nível,
+e não ao contrário.
+
+############################################################################
+Para a camada de casos de usos, eles apenas querem saber se os dados foram salvos, apenas isso.
+Não importa à eles saberem, como foi armazenado, quem armazenou, o que usou... ele não quer saber de nada disso.

@@ -1,28 +1,40 @@
-//vai processar a criação da rota
+/**
+ * vai processar a criação da rota
+ * Esse cara está independente de libs de armazenamentos
+ */
 
 import { LatLng, Route } from "./route.entity";
+import { RouteRepositoryInterface } from "./route.repository";
 
 type CreateRouteInput = {
-    title: string;
-    startPoinsts: LatLng;
-    endPoinsts: LatLng;
-    points?: LatLng[];
+    title: string,
+    startPosition: LatLng,
+    endPosition: LatLng,
+    points?: LatLng[],
 }
 
 type CreateRouteOutput = {
-    title: string;
-    startPoinsts: LatLng;
-    endPoinsts: LatLng;
-    points?: LatLng[];
+    title: string,
+    startPosition: LatLng,
+    endPosition: LatLng,
+    points?: LatLng[],
 }
 
-class CreateRouteUseCase {
+export class CreateRouteUseCase {
 
-    execute(input: CreateRouteInput): CreateRouteOutput {
+    constructor(
+        private routeRepo: RouteRepositoryInterface
+    ) {
+
+    }
+
+    async execute(input: CreateRouteInput): Promise<CreateRouteOutput> {
         //operações em cima das entidades
         const route = new Route(input);
-        return {
-
-        }
+        await this.routeRepo.insert(route); //Fazendo a inserção da rota
+        /**
+         * Os dados que estamos retornando, de route, são puros (São todos os dados da entidade
+         */
+        return route.toJson();
     }
 }
