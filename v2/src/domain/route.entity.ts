@@ -1,5 +1,4 @@
 import crypto from "crypto";
-
 /**
  * A Regra de Negócio fica em suas entidades
  */

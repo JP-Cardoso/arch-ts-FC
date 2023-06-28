@@ -15,11 +15,11 @@ app.post('/routes', async (req: Request, res: Response) => {
     res.status(201).json(output);
 });
 
-app.get('/routes', async(req: Request, res: Response) => {
+app.get('/routes', async (req: Request, res: Response) => {
     const listAllRoutesUseCase = new ListAllRoutesUseCase(routeRepo);
     const output = await listAllRoutesUseCase.execute();
     res.json(output);
-})
+});
 
 app.listen(port, () => {
     console.log(`Server is running in port ${port}`);

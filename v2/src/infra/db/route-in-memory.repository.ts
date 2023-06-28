@@ -14,6 +14,6 @@ export class RouteInMemoryRespository implements RouteRepositoryInterface {
 
     async insert(route: Route): Promise<void> {
         await this.items.push(route)
-    }
+    };
 
 }

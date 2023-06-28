@@ -30,4 +30,4 @@ e não ao contrário.
 
 ############################################################################
 Para a camada de casos de usos, eles apenas querem saber se os dados foram salvos, apenas isso.
-Não importa à eles saberem, como foi armazenado, quem armazenou, o que usou... ele não quer saber de nada disso.
+Não importa à eles saberem como foi armazenado, quem armazenou, o que usou... ele não quer saber de nada disso.
