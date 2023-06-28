@@ -12,4 +12,5 @@ import { Route } from "./route.entity";
 export interface RouteRepositoryInterface {
     //Não vai retornar nada, mas ele já vai ser assincrono
     insert(route: Route): Promise<void> 
+    findAll(): Promise<Route[]>
 };

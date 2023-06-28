@@ -6,3 +6,6 @@ Content-Type: application/json
     "startPosition": { "lat": 5, "lng": 10 },
     "endPosition": { "lat": 10, "lng": 15 }
 }
+
+###
+GET http://localhost:3000/routes
